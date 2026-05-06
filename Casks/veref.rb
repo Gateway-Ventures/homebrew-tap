@@ -1,22 +1,16 @@
 cask "veref" do
-  arch arm: "arm64", intel: "x64"
-
   version "0.1.0"
-  sha256 arm:   "0000000000000000000000000000000000000000000000000000000000000000",
-         intel: "0000000000000000000000000000000000000000000000000000000000000000"
 
-  url "https://github.com/Gateway-Ventures/veref.work/releases/download/v#{version}/Veref-#{version}-#{arch}.dmg",
-      verified: "github.com/Gateway-Ventures/veref.work/"
+  sha256 "3da8df62402a517ef48167b8072d560ee6c902c55adff4993f492640dc53002e"
+
+  url "https://storage.googleapis.com/veref-releases/desktop/v#{version}/Veref-#{version}-arm64.dmg",
+      verified: "storage.googleapis.com/veref-releases/"
   name "Veref"
   desc "Verified hiring ops — reference checks, identity, and interview trust"
   homepage "https://veref.work"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :ventura"
+  depends_on arch: :arm64
 
   app "Veref.app"
 
