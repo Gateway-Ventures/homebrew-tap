@@ -9,7 +9,7 @@ cask "veref" do
   desc "Verified hiring ops — reference checks, identity, and interview trust"
   homepage "https://veref.work"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
   depends_on arch: :arm64
 
   app "Veref.app"
